@@ -2,10 +2,11 @@ from vit import FeedForward, Attention, Transformer, ViT
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader
+from torch.utils.data import DataLoader, DistributedSampler
 import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 from tqdm import tqdm
+import wandb
 
 import os
 import argparse
@@ -38,14 +39,20 @@ def parse_args():
                         help='Number of class')
     parser.add_argument('--expname', default='TEST', type=str,
                         help='name of experiment')
+    parser.add_argument('--wandb_project', type=str, default='ViT_CIFAR100',
+                        help='wandb project name')
 
     return parser.parse_args()
 
+
 def main():
     os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
-    os.environ["CUDA_VISIBLE_DEVICES"] = "6"
+    os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
     args = parse_args()
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    wandb.init(project=args.wandb_project, config=args, name=args.expname)
+
 
     transform_train = transforms.Compose([
         transforms.Resize((args.image_size, args.image_size)),
@@ -82,6 +89,8 @@ def main():
     total_params = sum(p.numel() for p in model.parameters() if p.requires_grad)
     print(f'Total Parameters : {total_params:,}')
 
+    wandb.watch(model, log="all")
+
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=args.learning_rate)
@@ -108,6 +117,7 @@ def main():
 
         epoch_loss = running_loss / total
         epoch_acc = 100. * correct / total
+        wandb.log({"Train Loss":epoch_loss,"Train Accuracy":epoch_acc,"Epoch":epoch})
         return epoch_loss, epoch_acc
 
     def evaluate(model, loader, criterion, device):
@@ -128,6 +138,7 @@ def main():
                 correct += predicted.eq(labels).sum().item()
         epoch_loss = running_loss / total
         epoch_acc = 100. * correct / total
+        wandb.log({"Validation Loss":epoch_loss,"Validation Accuracy":epoch_acc,"Epoch":epoch})
         return epoch_loss, epoch_acc
 
     os.makedirs('checkpoints', exist_ok=True)
@@ -141,6 +152,8 @@ def main():
         scheduler.step()
 
         torch.save(model.state_dict(), f'checkpoints/vit_cifar100_epoch{epoch}.pth')
+
+    wandb.finish()
 
 if __name__ == '__main__':
     main()
