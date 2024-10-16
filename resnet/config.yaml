@@ -1,0 +1,5 @@
+python train.py --dataset cifar100 --epochs 100 --batch_size 256 --lr 0.1 --expname resnet_cifar100_1
+python train.py --dataset cifar10 --epochs 80 --batch_size 256 --lr 0.1 --expname resnet_cifar10_1
+python train.py --dataset cifar10 --epochs 80 --batch_size 256 --lr 0.1 --expname resnet101_cifar10_1
+python train.py --dataset cifar100 --epochs 100 --batch_size 256 --lr 0.1 --expname resnet101_cifar100_1
+python train.py --dataset cifar100 --epochs 100 --batch_size 256 --lr 0.1 --expname resnet50_cifar100_cj

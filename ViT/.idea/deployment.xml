@@ -5,70 +5,70 @@
       <paths name="docker1">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker1_interpreter">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker2">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker2_interpreter">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker3">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker3_interpreter">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker4">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker4_interpreter">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker5">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
       <paths name="docker5_interpreter">
         <serverdata>
           <mappings>
-            <mapping deploy="private/resnet" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="private/vit" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>

@@ -1,4 +1,5 @@
-import torch
+# original code : https://github.com/clovaai/CutMix-PyTorch/blob/master/resnet.py
+
 import torch.nn as nn
 import torch.nn.functional as F
 
