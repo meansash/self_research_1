@@ -1,8 +1,8 @@
-from vit import FeedForward, Attention, Transformer, ViT
+from vit import ViT
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader, DistributedSampler
+from torch.utils.data import DataLoader
 import torchvision.transforms as transforms
 import torchvision.datasets as datasets
 from tqdm import tqdm
@@ -117,7 +117,7 @@ def main():
 
         epoch_loss = running_loss / total
         epoch_acc = 100. * correct / total
-        wandb.log({"Train Loss":epoch_loss,"Train Accuracy":epoch_acc,"Epoch":epoch})
+        wandb.log({"Train Loss":epoch_loss,"Train Accuracy":epoch_acc})
         return epoch_loss, epoch_acc
 
     def evaluate(model, loader, criterion, device):
@@ -138,7 +138,7 @@ def main():
                 correct += predicted.eq(labels).sum().item()
         epoch_loss = running_loss / total
         epoch_acc = 100. * correct / total
-        wandb.log({"Validation Loss":epoch_loss,"Validation Accuracy":epoch_acc,"Epoch":epoch})
+        wandb.log({"Validation Loss":epoch_loss,"Validation Accuracy":epoch_acc})
         return epoch_loss, epoch_acc
 
     os.makedirs('checkpoints', exist_ok=True)
@@ -151,7 +151,8 @@ def main():
         print(f'Validation loss : {val_loss:.4f}, Validation acc : {val_acc:.2f}%')
         scheduler.step()
 
-        torch.save(model.state_dict(), f'checkpoints/vit_cifar100_epoch{epoch}.pth')
+        if epoch % 10 == 0:
+            torch.save(model.state_dict(), 'checkpoints/vit_cifar100.pth')
 
     wandb.finish()
 
