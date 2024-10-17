@@ -9,6 +9,8 @@ The main objective of this project is to explore the performance and characteris
 - ViT Pretrained : An evaluation of pretrained Vision Transformer models implemented using the `timm` library
 - further experiments and results will be added in future updates....
 
+Each model has been implemented and tested on standard datasets (e.g., CIFAR-10, CIFAR-100, ImageNet1k) to compare performance metrics such as accuracy and error rates.
+
 ## Repository Structure
 ```bash
 /self_research_1
@@ -17,3 +19,6 @@ The main objective of this project is to explore the performance and characteris
     ├── vit_pretrained/           # Code for loading and evaluating pretrained ViT models using timm
     └── README.md                # This file
 ```
+
+---
+This repository is part of the Self-Research 1 course and serves as the official submission of all code implementations and experiment results related to the project.
