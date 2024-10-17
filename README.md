@@ -2,7 +2,7 @@
 This repository contrains the code implementation for Self-Research 1, a project focused on the implementation and experimentation of Computer Vision Models.
 
 ## Project Overview
-The main objective of this project is to explore the performance and characteristics of various deep learning models in the context of computer vision tasks. Teh models implemented in this project are :  
+The main objective of this project is to explore the performance and characteristics of various deep learning models in the context of computer vision tasks. The models implemented in this project are :  
 
 - ResNet : A deep residual network aimed at solving the degradation problem in deep learning models by introducing residual connections
 - Vision Transformer(ViT) : A transformer-based model applied to image classification, exploring its performance compared to CNN-based architectures.
