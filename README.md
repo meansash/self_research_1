@@ -1,5 +1,5 @@
 # Self-Research 1 - Code Submission
-This repository contrains the code implementation for Self-Research 1
+This repository contrains the code implementation for Self-Research 1  
 A project focused on the implementation and experimentation of Computer Vision Models.
 
 ## Project Overview
