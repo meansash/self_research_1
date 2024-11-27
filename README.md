@@ -46,6 +46,7 @@ Each image is a 32x32 colored image, suitable for benchmarking deep learning mod
 
 ### Results Summary
 ```markdown
+|--------------------------|-------------------|--------------------|
 | Model                    | Top-1 Accuracy (%)| Top-5 Accuracy (%) |
 |--------------------------|-------------------|--------------------|
 | VGGNet                   | 75.4              | 93.38              |
@@ -100,3 +101,16 @@ python main.py --gpu 0 --model vit_scratch --lr 0.01 --batch_size 64 --epochs 10
 - Experiment with additional datasets like ImageNet and Tiny ImageNet.
 - Explore Vision-Language Models (e.g., CLIP) for multimodal learning.
 - Investigate and research Medical AI models utilizing Vision-Language Models (VLM), focusing on applications such as medical image analysis and diagnosis
+
+## References
+### Papers
+- Simonyan, Karen, and Andrew Zisserman. "Very deep convolutional networks for large-scale image recognition." arXiv preprint arXiv:1409.1556 (2014).  
+- He, Kaiming, et al. "Deep residual learning for image recognition." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.  
+- Dosovitskiy, Alexey. "An image is worth 16x16 words: Transformers for image recognition at scale." arXiv preprint arXiv:2010.11929 (2020).  
+- Wightman, Ross, Hugo Touvron, and Hervé Jégou. "Resnet strikes back: An improved training procedure in timm." arXiv preprint arXiv:2110.00476 (2021).  
+
+### GitHub Repositories
+- **PyTorch CIFAR** : A PyTorch implementation of training models on CIFAR datasets.
+[GitHub Link](https://github.com/kuangliu/pytorch-cifar)
+- **Vision Transformers** : Implementation of Vision Transformers in PyTorch
+[GitHub Link](https://github.com/lucidrains/vit-pytorch)
