@@ -14,7 +14,7 @@ All models were tested on dataset **CIFAR-100** to evaluate metrics like accurac
 ## Directory Structure
 The following is the directory structure of this repository:
 
-```markdown
+```yaml
 selfResearch/
 ├── models/
 │   ├── resnet.py          # ResNet model implementation
@@ -49,9 +49,13 @@ Each image is a 32x32 colored image, suitable for benchmarking deep learning mod
 | Model                    | Top-1 Accuracy (%)| Top-5 Accuracy (%) |
 |--------------------------|-------------------|--------------------|
 | VGGNet                   | 75.4              | 93.38              |
+|--------------------------|-------------------|--------------------|
 | ResNet-50                | 79.2              | 94.52              |
+|--------------------------|-------------------|--------------------|
 | Vision Transformer (ViT) | 85.6              | 98.4               |
+|--------------------------|-------------------|--------------------|
 | ResNet (Tuned)           | 80.56             | 95.04              |
+|--------------------------|-------------------|--------------------|
 ```
 
 ## How To Use
