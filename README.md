@@ -14,7 +14,7 @@ All models were tested on dataset **CIFAR-100** to evaluate metrics like accurac
 ## Directory Structure
 The following is the directory structure of this repository:
 
-```yaml
+```markdown
 selfResearch/
 ├── models/
 │   ├── resnet.py          # ResNet model implementation
@@ -24,6 +24,7 @@ selfResearch/
 ├── data_transform.py      # Data augmentation and preprocessing utilities
 ├── main.py                # Main script for training and evaluation
 ├── utils.py               # Helper functions and utilities
+├── requirements.txt       # List of dependencies required to run the project
 └── README.md              # Project documentation
 ```  
 
@@ -44,7 +45,7 @@ Each image is a 32x32 colored image, suitable for benchmarking deep learning mod
 - **Top-5 Accuracy** : The percentage of predictions where the ground truth is within the top 5 predicted classes.
 
 ### Results Summary
-```bash
+```markdown
 | Model                    | Top-1 Accuracy (%)| Top-5 Accuracy (%) |
 |--------------------------|-------------------|--------------------|
 | VGGNet                   | 75.4              | 93.38              |
