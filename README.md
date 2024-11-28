@@ -63,7 +63,7 @@ Each image is a 32x32 colored image, suitable for benchmarking deep learning mod
 ### 1. Clone the Repository
 clone the Repository and navigate to the project directory : 
 ```bash
-git clone https://gitgub.com/meansash/self_research_1.git
+git clone https://github.com/meansash/self_research_1.git
 cd self_research_1
 ```
 ### 2. Install Dependencies
