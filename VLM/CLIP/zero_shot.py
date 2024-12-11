@@ -1,4 +1,4 @@
-# python zero_shot.py 
+# python zero_shot.py
 
 
 import os
