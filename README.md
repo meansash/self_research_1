@@ -7,6 +7,7 @@ The objective of this project is to explore and analyze the performance of vario
 - **ResNet**: Addressing the degradation problem in deep networks using residual connections.
 - **Vision Transformer (ViT)**: Investigating the effectiveness of Transformer-based architectures in image classification tasks.
 - **ViT Pretrained**: Evaluating pretrained Vision Transformer models using the `torchvision` library.
+- **Vision-Language Models (VLMs)**: Analyzing the capabilities of VLMs, such as CLIP and CheXzero, in medical AI tasks. Zero-shot learning performance was explored, and Prompt Engineering was applied to improve model predictions
 - **Further Experiments**: Exploring advanced techniques like hyperparameter tuning and augmentation methods (e.g., CutMix).
 
 All models were tested on dataset **CIFAR-100** to evaluate metrics like accuracy and error rates.
@@ -21,6 +22,8 @@ selfResearch/
 │   ├── vgg.py             # VGGNet model implementation
 │   ├── vit_pretrained.py  # Pretrained Vision Transformer implementation
 │   ├── vit_scratch.py     # Vision Transformer trained from scratch
+├── VLM/                   # Vision-language model (CLIP) implementation
+├── zero_shot_medical/     # Zero-shot medical AI implementation
 ├── data_transform.py      # Data augmentation and preprocessing utilities
 ├── main.py                # Main script for training and evaluation
 ├── utils.py               # Helper functions and utilities
@@ -100,7 +103,8 @@ python main.py --gpu 0 --model vit_scratch --lr 0.01 --batch_size 64 --epochs 10
 ## Future Work
 - Experiment with additional datasets like ImageNet and Tiny ImageNet.
 - Explore Vision-Language Models (e.g., CLIP) for multimodal learning.
-- Investigate and research Medical AI models utilizing Vision-Language Models (VLM), focusing on applications such as medical image analysis and diagnosis
+- Investigate and research Medical AI models utilizing Vision-Language Models (VLM), focusing on applications such as medical image analysis and diagnosis.
+- Add experimental results for CLIP and CheXpert, which are currently being conducted, to provied deeper insights into the performance of Vision-Language Models in real-world medical imaging tasks.
 
 ## References
 ### Papers
@@ -108,9 +112,17 @@ python main.py --gpu 0 --model vit_scratch --lr 0.01 --batch_size 64 --epochs 10
 - He, Kaiming, et al. "Deep residual learning for image recognition." Proceedings of the IEEE conference on computer vision and pattern recognition. 2016.  
 - Dosovitskiy, Alexey. "An image is worth 16x16 words: Transformers for image recognition at scale." arXiv preprint arXiv:2010.11929 (2020).  
 - Wightman, Ross, Hugo Touvron, and Hervé Jégou. "Resnet strikes back: An improved training procedure in timm." arXiv preprint arXiv:2110.00476 (2021).  
+- Chen, Ting, et al. "A simple framework for contrastive learning of visual representations." International conference on machine learning. PMLR, 2020.  
+- Radford, Alec, et al. "Learning transferable visual models from natural language supervision." International conference on machine learning. PMLR, 2021.  
+- Tiu, E., Talius, E., Patel, P. et al. Expert-level detection of pathologies from unannotated chest X-ray images via self-supervised learning. Nat. Biomed. Eng 6, 1399–1406 (2022).https://doi.org/10.1038/s41551-022-00936-9
+
 
 ### GitHub Repositories
 - **PyTorch CIFAR** : A PyTorch implementation of training models on CIFAR datasets.
 [GitHub Link](https://github.com/kuangliu/pytorch-cifar)
 - **Vision Transformers** : Implementation of Vision Transformers in PyTorch
 [GitHub Link](https://github.com/lucidrains/vit-pytorch)
+- **CLIP** : Implementation of CLIP
+[GitHub Link](https://github.com/openai/CLIP)
+- **CheXzero** : Implementation of CheXzero
+[GitHub Link](https://github.com/rajpurkarlab/CheXzero)
