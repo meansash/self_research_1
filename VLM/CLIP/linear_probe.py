@@ -1,5 +1,3 @@
-# python linear_probe.py --dataset_root /home/meansash/private/selfResearch/VLM/CLIP/classification --gpu_id 0
-
 import os
 import clip
 import torch
